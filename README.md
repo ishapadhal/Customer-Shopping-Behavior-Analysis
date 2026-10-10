@@ -1,92 +1,192 @@
-# 👨🏻‍💻Customer Behavior Data Analyst Portfolio Project
-This project represents a complete, industry standard, end-to-end data analytics workflow, designed to mirror the real responsibilities of professional analysts in modern business environments. The project encompasses all critical stages of data analysis, from data preparation and modeling to insight generation, visualization, and reporting.
-
-This project is perfect for:
-- 📊 Data Analyst aspirants who want to build a strong **Portfolio Project** for interviews and LinkedIn
-- 📚 Anyone learning Python, SQL, and Power BI
-- 💼 Professionals preparing for interviews in Data Analytics, Data Science or Product Analytics roles
-
-# **🎥 Watch this [YouTube video](https://www.youtube.com/watch?v=5PrZvPeUw60&list=PLAx-M6Di0SisFJ1rv5M_FRHUlGA5rtUf_&index=3) to implement the full project from scratch:**  
-[![Advanced Data Analysis Portfolio Project using Retail Customer Data](https://github.com/user-attachments/assets/abbb6371-a0b2-4bec-a304-7c7da98658b6)](https://www.youtube.com/watch?v=x8dfQkKTyP0&list=PLAx-M6Di0SisFJ1rv5M_FRHUlGA5rtUf_&index=2)
-🔗 *Link to Video:* [Watch on Youtube](https://www.youtube.com/watch?v=5PrZvPeUw60&list=PLAx-M6Di0SisFJ1rv5M_FRHUlGA5rtUf_&index=3)
-
+# 🛍️ Customer Shopping Behavior Analysis
 
 ## 📌 Project Overview
-The goal of this project is to simulate a corporate-grade end-to-end data analytics workflow, demonstrating the ability to translate raw data into strategic business intelligence by:
 
-✅ Data Preparation,Modeling & Exploratory Data Analysis (Python): Clean and transform the raw dataset for analysis.
+This project focuses on analyzing customer shopping behavior using Python and data analytics techniques. The objective is to explore customer purchasing patterns, understand consumer preferences, identify shopping trends, and uncover actionable business insights.
 
-✅ Data Analysis (SQL): Simulate business transactions, and run queries to extract insights on customer segments, loyalty, and purchase drivers.
+The analysis uses a customer shopping dataset containing demographic information, purchase history, product categories, spending behavior, discounts, subscription status, and customer reviews.
 
-✅ Visualization & Insights (Power BI): Build an interactive dashboard that highlights key patterns and trends, enabling stakeholders to make data-driven decisions.
+## 🎯 Project Objectives
 
-✅ Report and Presentation: Write a clear project report summarizing your key findings and business recommendations. Prepare a presentation that visually communicates insights and actionable recommendations to stakeholders.
+- Analyze customer purchasing patterns and spending habits.
+- Understand the relationship between demographics and purchasing behavior.
+- Identify popular product categories and seasonal shopping trends.
+- Examine the impact of discounts and promotional codes.
+- Explore customer subscription and loyalty behavior.
+- Generate data-driven insights to support business decisions.
 
-![Project Workflow](https://github.com/user-attachments/assets/8bbd5dc9-eb6c-40c1-8f19-c08b4107f654)
+## 🛠️ Technologies Used
 
-## 🛠️ How to Use This Project
+| Technology | Purpose |
+|---|---|
+| Python | Data analysis |
+| Pandas | Data manipulation and exploration |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Jupyter Notebook | Interactive analysis |
+| VS Code | Development environment |
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/amlanmohanty1/customer-trends-data-analysis-SQL-Python-PowerBI.git
-   cd customer-trends-data-analysis-SQL-Python-PowerBI
-   ```
-2. **Open Customer_Shopping_Behavior_Analysis.ipynb notebook**
+## 📂 Project Structure
 
-    This file contains:
+```text
+Customer-Shopping-Behavior-Analysis/
+│
+├── Customer_Shopping_Behavior_Analysis.ipynb
+├── customer_shopping_behavior.csv
+├── README.md
+├── .gitignore
+└── requirements.txt
+```
 
-      - Data Import
+*The structure above is a suggested repository layout. Include only files and dependencies actually used in the project.*
 
-      - Data exploration
+## 📊 Dataset Description
 
-      - Data cleaning
+The dataset contains information about customer shopping activities.
 
-      - Connection to SQL Database
-  
-3. **Load the data from Python notebook into MySQL/PostgreSQL/MS SQL Server**
+**Key Features:**
 
-      - Create a database in SQL
+- Customer ID
+- Age and Gender
+- Item Purchased
+- Category
+- Purchase Amount (USD)
+- Location
+- Size and Color
+- Season
+- Review Rating
+- Subscription Status
+- Shipping Type
+- Discount Applied
+- Promo Code Used
+- Previous Purchases
+- Payment Method
 
-      - Run Python code to load data into SQL database
-  
-      - Open **customer_behavior_sql_queries.sql**
-  
-      - Answer Business Questions using SQL Queries 
-      
-4. **Connect the SQL Database to Power BI**
+## 🔍 Data Analysis Workflow
 
-      - Open **customer_behavior_dashboard.pbix**
-   
-      - Create interactive dashboard in Power BI
-  
-6. **Create Project Report and Presentation**
+### 1. Data Loading
 
-      - Create project report
-   
-      - Build presentation deck using Gamma AI
-  
-7. **Follow along with the YouTube video for full walkthrough. 👨‍💼**
+Import the customer shopping dataset using Pandas.
 
+```python
+import pandas as pd
 
-## 📜 License
+df = pd.read_csv("customer_shopping_behavior.csv")
+df.head()
+```
 
-MIT — feel free to fork, star, and use in your portfolio.
+### 2. Data Exploration
 
-## 👨‍💻 About the Author
-Hey, I’m Amlan Mohanty, a Data Analyst & Content Creator.
-I break down complex data topics into simple, practical content that actually helps you land a job.
+Understand the dataset structure, column types, and statistical characteristics.
 
- ### 🚀 Stay Connected & Join my Data Community
-If you enjoyed this project and want to keep learning and growing as a data analyst, let’s stay in touch! I regularly share content around SQL, data analytics, portfolio projects, job tips, and more.
+```python
+df.shape
+df.info()
+df.describe()
+```
 
-🎥 YouTube: [Amlan Mohanty](https://www.youtube.com/@amlanmohanty1)
-- Beginner-friendly tutorials, real-world projects, job and career advice
+### 3. Data Cleaning
 
-📺 Instagram: [datacareerschool](https://www.instagram.com/datacareerschool/)
-- Quick SQL tips, data memes, and behind-the-scenes content
+- Identify missing values.
+- Check for duplicate records.
+- Validate data types.
+- Prepare the dataset for analysis.
 
-💼 LinkedIn: [Amlan Mohanty](https://www.linkedin.com/in/amlanmohanty1/)
-- Let’s connect professionally and grow your data career
+### 4. Exploratory Data Analysis (EDA)
 
+Explore important customer behavior metrics, including:
 
-## 💡 Thanks for checking out the project! Your support means a lot! Feel free to star ⭐ this repo or share it with someone learning Data Analytics.🚀
+- Customer distribution by age and gender.
+- Spending across product categories.
+- Seasonal purchasing trends.
+- Subscription-based purchasing patterns.
+- Discount and promotional code usage.
+- Customer review ratings.
+- Purchase history and customer preferences.
+
+### 5. Data Visualization
+
+Use charts and plots to communicate customer shopping trends and relationships between variables.
+
+## 💡 Business Questions
+
+The project aims to answer questions such as:
+
+1. Which product categories generate the highest sales?
+2. What is the average customer purchase amount?
+3. How does customer spending vary by age and gender?
+4. Which seasons experience the highest shopping activity?
+5. Do subscribed customers spend more than non-subscribed customers?
+6. How do discounts influence customer purchases?
+7. Which shipping methods are most commonly used?
+8. How does previous purchase history relate to shopping behavior?
+
+## 🚀 How to Run the Project
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Customer-Shopping-Behavior-Analysis.git
+```
+
+**2. Navigate to the project folder**
+
+```bash
+cd Customer-Shopping-Behavior-Analysis
+```
+
+**3. Create a virtual environment**
+
+```bash
+python -m venv .venv
+```
+
+**4. Activate the environment**
+
+Windows:
+
+```powershell
+.venv\Scripts\activate
+```
+
+**5. Install the required libraries**
+
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+**6. Launch Jupyter Notebook**
+
+```bash
+jupyter notebook
+```
+
+Open `Customer_Shopping_Behavior_Analysis.ipynb` and run the notebook cells.
+
+## 📈 Expected Outcomes
+
+This project is designed to help identify:
+
+- High-performing product categories.
+- Customer spending patterns.
+- Differences in purchasing behavior across demographics.
+- Seasonal demand trends.
+- Opportunities for customer retention.
+- Potential improvements in marketing and promotional strategies.
+
+## 🔮 Future Enhancements
+
+- Build an interactive Power BI dashboard.
+- Perform SQL-based business analysis.
+- Apply customer segmentation techniques.
+- Develop predictive models for customer purchasing behavior.
+- Create an interactive Streamlit analytics dashboard.
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes. Dataset usage remains subject to its original license.
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
